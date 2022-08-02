@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(13, 17, 23);
+  color: #d19a66;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  margin: 10% 10% 0;
+}
+
+.quote-container {
+  text-align: center;
+}
+
+.quote-container h2 {
+  color: #dbedf3;
+}
+
+.submit-btn {
+  margin-top: 20px;
+}
