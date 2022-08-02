@@ -14,12 +14,12 @@ body {
 }
 
 .quote-container h1 {
-  font-size: 50px;
+  font-size: 70px;
 }
 
 .quote-container h2 {
   color: #dbedf3;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .submit-btn {
@@ -27,5 +27,5 @@ body {
 }
 
 .joke-btn {
-  font-size: 30px;
+  font-size: 40px;
 }
