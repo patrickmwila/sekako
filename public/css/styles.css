@@ -6,17 +6,26 @@ body {
 .main-section {
   display: flex;
   justify-content: center;
-  margin: 10% 10% 0;
+  margin: 15% 20% 0;
 }
 
 .quote-container {
   text-align: center;
 }
 
+.quote-container h1 {
+  font-size: 50px;
+}
+
 .quote-container h2 {
   color: #dbedf3;
+  font-size: 50px;
 }
 
 .submit-btn {
   margin-top: 20px;
+}
+
+.joke-btn {
+  font-size: 30px;
 }
