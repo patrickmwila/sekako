@@ -12,17 +12,17 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res)=> {
-  const url = 'https://v2.jokeapi.dev/joke/Programming';
+  const url = 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Dark?blacklistFlags=religious';
   https.get(url, (apiRes) => {
 
     apiRes.on('data', (apiResData) => {
       const jokeRes = JSON.parse(apiResData);
 
       if (jokeRes.type === 'twopart') {
-        res.render('twopart', {setup: jokeRes.setup, delivery: jokeRes.delivery});
+        res.render('twopart', {category: jokeRes.category, setup: jokeRes.setup, delivery: jokeRes.delivery});
 
       } else {
-        res.render('onepart', {joke: jokeRes.joke});
+        res.render('onepart', {category: jokeRes.category, joke: jokeRes.joke});
       }
     });
 
@@ -33,6 +33,6 @@ app.post('/', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(process.env.PORT || 3001, ()=> {
+app.listen(process.env.PORT || 3000, ()=> {
   console.log('server is up and running');
 });
